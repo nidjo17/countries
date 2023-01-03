@@ -229,6 +229,9 @@ class Repository
      */
     public function makeAllFlags($country)
     {
+		if ($country['iso_3166_1_alpha2'] === null) {
+			$country['iso_3166_1_alpha2'] = '';
+		}
         return [
             // https://www.flag-sprites.com/
             // https://github.com/LeoColomb/flag-sprites
